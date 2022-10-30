@@ -1,10 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { Plantoes } from './src/screens/plantoes';
+import { BarraInferior } from './src/components/barra-inferior';
+import { BarraSuperior } from './src/components/barra-superior';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <BarraSuperior></BarraSuperior>
+      <Plantoes></Plantoes>
+      <BarraInferior></BarraInferior>
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +18,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#00816f',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
   },
 });
