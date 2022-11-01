@@ -1,5 +1,5 @@
-import React from "react"
-import {Text, StyleSheet, View, Button, Dimensions, TouchableHighlight, Image} from "react-native"
+ import React from "react"
+import {Text, StyleSheet, View, Dimensions, TouchableHighlight, Image} from "react-native"
 export const BarraInferior = () => (
     <View
         style={{...styles.BarraInferior, ...styles.button}}
@@ -8,27 +8,53 @@ export const BarraInferior = () => (
             activeOpacity={0.6}
             underlayColor="#7fc7bd"
             onPress={() => alert('Pressed!')}>
+           <View>
             <Image 
-            source={require("../../assets/home.png")} 
+            source={require("../../assets/home-cinza.png")} 
             style={styles.imageButton}
             />
+            <Text>Home</Text>
+            </View>
+            </TouchableHighlight>
+        <TouchableHighlight
+            activeOpacity={0.6}
+            underlayColor="#7fc7bd"
+            color="purple"
+            onPress={() => alert('Pressed!')}>
+            <View>
+            <Image 
+            source={require("../../assets/plantoes-verde.png")} 
+            style={styles.imageButton}
+            />
+            <Text>Plantões</Text>
+            </View>
         </TouchableHighlight>
-        <Button
-            title="Plantões"
-            color="#7fc7bd"
-        />
-        <Button
-            title="Favoritos"
-            color="#7fc7bd"
-        />
+        <TouchableHighlight
+            activeOpacity={0.6}
+            underlayColor="#7fc7bd"
+            color="purple"
+            onPress={() => alert('Pressed!')}>
+            <View>
+            <Image 
+            source={require("../../assets/cards-heart-outline-cinza.png")} 
+            style={styles.imageButton}
+            />
+            <Text>Favoritos</Text>
+            </View>
+        </TouchableHighlight>
         <TouchableHighlight
             activeOpacity={0.6}
             underlayColor="#7fc7bd"
             onPress={() => alert('Pressed!')}>
+            <View>
             <Image 
-            source={require("../../assets/seta.png")} 
+            source={require("../../assets/account-cinza.png")} 
             style={styles.imageButton}
             />
+            <Text
+                style={styles.textButton}
+            >Minha conta</Text>
+            </View>
         </TouchableHighlight>
     </View>
 )
@@ -45,6 +71,9 @@ const styles = StyleSheet.create({
     imageButton: {
         width: 40,
         height: 40,
+        backgroundColor: '#7fc7bd'
+    },
+    textButton: {
         backgroundColor: '#7fc7bd'
     }
 })

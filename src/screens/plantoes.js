@@ -11,6 +11,7 @@ export const Plantoes = () => (
 const styles = StyleSheet.create({
     titleText: {
         fontSize: 30,
-        color: 'black'
+        color: 'black',
+        fontFamily: ''
     }
 })
