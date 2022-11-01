@@ -9,7 +9,7 @@ export const BarraSuperior = () => (
             underlayColor="#7fc7bd"
             onPress={() => alert('Pressed!')}>
             <Image 
-            source={require("../../assets/seta.png")} 
+            source={require("../../assets/seta-cinza.png")} 
             style={styles.imageButton}
             />
         </TouchableHighlight>
@@ -25,6 +25,8 @@ const styles = StyleSheet.create({
         width: Dimensions.get("window").width
     },
     imageButton: {
+        marginTop: 50,
+        marginLeft: -90,
         width: 40,
         height: 40,
         backgroundColor: '#7fc7bd'

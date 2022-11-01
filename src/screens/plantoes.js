@@ -12,6 +12,6 @@ const styles = StyleSheet.create({
     titleText: {
         fontSize: 30,
         color: 'black',
-        fontFamily: ''
+        fontWeight: "900"
     }
 })

@@ -13,7 +13,9 @@ export const BarraInferior = () => (
             source={require("../../assets/home-cinza.png")} 
             style={styles.imageButton}
             />
-            <Text>Home</Text>
+            <Text
+                style={styles.textButton}
+            >Home</Text>
             </View>
             </TouchableHighlight>
         <TouchableHighlight
@@ -26,7 +28,9 @@ export const BarraInferior = () => (
             source={require("../../assets/plantoes-verde.png")} 
             style={styles.imageButton}
             />
-            <Text>Plantões</Text>
+            <Text
+                style={styles.textButton}
+            >Plantões</Text>
             </View>
         </TouchableHighlight>
         <TouchableHighlight
@@ -39,7 +43,9 @@ export const BarraInferior = () => (
             source={require("../../assets/cards-heart-outline-cinza.png")} 
             style={styles.imageButton}
             />
-            <Text>Favoritos</Text>
+            <Text
+                style={styles.textButton}
+            >Favoritos</Text>
             </View>
         </TouchableHighlight>
         <TouchableHighlight
@@ -62,6 +68,7 @@ export const BarraInferior = () => (
 const styles = StyleSheet.create({
     BarraInferior: {
         flex: 0,
+        backgroundColor: "#7fc7bd",
         flexDirection: "row",
         width: Dimensions.get("window").width
     },
@@ -69,11 +76,18 @@ const styles = StyleSheet.create({
         alignSelf: "stretch"
     },
     imageButton: {
-        width: 40,
-        height: 40,
-        backgroundColor: '#7fc7bd'
+        width: 30,
+        height: 30,
+        marginTop: 5,
+        backgroundColor: '#7fc7bd',
+        alignSelf: "center"
     },
     textButton: {
-        backgroundColor: '#7fc7bd'
+        width: 98,
+        height: 40,
+        marginBottom: -15,
+        textAlign: "center",
+        backgroundColor: '#7fc7bd',
+        fontWeight: "900"
     }
 })
