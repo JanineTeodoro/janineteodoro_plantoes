@@ -1,5 +1,5 @@
  import React from "react"
-import {Text, StyleSheet, View, Dimensions, TouchableHighlight, Image, TouchableOpacity} from "react-native"
+import {Text, StyleSheet, View, Dimensions, Image, TouchableOpacity} from "react-native"
 export const BarraInferior = () => (
     <View
         style={{...styles.BarraInferior, ...styles.button}}
