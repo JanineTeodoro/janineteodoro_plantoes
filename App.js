@@ -8,7 +8,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <BarraSuperior></BarraSuperior>
-      <Plantoes></Plantoes>
+      <View style={styles.plantoes}>
+        <Plantoes></Plantoes>
+      </View>
       <BarraInferior></BarraInferior>
       <StatusBar style="auto" />
     </View>
@@ -18,8 +20,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'space-between',
   },
+  plantoes: {
+    alignItems: "flex-start",
+    flex: 1
+  }
 });
