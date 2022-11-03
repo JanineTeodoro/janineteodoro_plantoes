@@ -1,5 +1,5 @@
 import React from "react"
-import {Text, StyleSheet, Image, View, Dimensions, TouchableOpacity} from "react-native"
+import {Text, StyleSheet, Image, View, Dimensions, TouchableOpacity, Linking} from "react-native"
 
 export const Plantoes = () => (
     <View style={{backgroundColor: "white"}}>
@@ -29,7 +29,7 @@ export const Plantoes = () => (
                 <View>
                     <TouchableOpacity style={styles.ligar}
                         activeOpacity={0.6}
-                        onPress={() => alert('Ligando...')}>
+                        onPress={() => {Linking.openURL('tel:00000')}}>
                         <Image 
                         style={styles.ligacao}
                         source={require("../../assets/phone-green.png")} 
