@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
         marginLeft: 30
     },
     professionalText: {
-        color: "#6d7a78",
+        color: "#424f4d",
         fontWeight: "500",
         fontSize: 20,
         marginTop: 20,

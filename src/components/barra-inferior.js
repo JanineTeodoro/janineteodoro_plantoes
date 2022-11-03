@@ -28,7 +28,7 @@ export const BarraInferior = () => (
             style={styles.imageButton}
             />
             <Text
-                style={styles.textButton}
+                style={styles.plantoesButton}
             >Plantões</Text>
             </View>
         </TouchableOpacity>
@@ -89,5 +89,15 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: "700",
         color: "#6d7a78"
+    },
+    plantoesButton: {
+        width: 98,
+        height: 40,
+        marginBottom: -15,
+        textAlign: "center",
+        backgroundColor: 'white',
+        fontSize: 14,
+        fontWeight: "700",
+        color: "#006557"
     }
 })
