@@ -2,14 +2,14 @@ import React from "react"
 import {Text, StyleSheet, Image, View, Dimensions, TouchableOpacity} from "react-native"
 
 export const Plantoes = () => (
-    <View>
+    <View style={{backgroundColor: "white"}}>
         <View style={styles.solicitacao}>
             <Image 
-                style={styles.button1}
+                style={styles.icone}
             source={require("../../assets/check-cinza.png")} 
             />
             <Text
-                style={styles.titleText1}>
+                style={styles.solicitacaoText}>
                 <Text>Solicitação </Text> 
                 <Text style={{fontWeight: "600"}}>aceita</Text>
             </Text>
@@ -23,20 +23,19 @@ export const Plantoes = () => (
             </View>
             <View style={{flex:3}}>
             <Text
-                style={styles.titleText2}>
+                style={styles.professionalText}>
                 <Text style={{fontWeight: "600"}}>Janine Leite Teodoro</Text>
             </Text>
-                <View style={styles.ligar}>
-                    <TouchableOpacity
+                <View>
+                    <TouchableOpacity style={styles.ligar}
                         activeOpacity={0.6}
-                        underlayColor="#7fc7bd"
-                        onPress={() => alert('Reportar')}>
+                        onPress={() => alert('Ligando...')}>
                         <Image 
-                        style={styles.button3}
+                        style={styles.ligacao}
                         source={require("../../assets/phone-green.png")} 
                         />
                         <Text
-                        style={styles.titleText3}>
+                        style={styles.professionalCall}>
                         <Text style={{fontWeight: "500"}}>Ligar para o profissional</Text>
                         </Text>
                     </TouchableOpacity>
@@ -51,10 +50,10 @@ export const Plantoes = () => (
                     <View>
                     <Image 
                     source={require("../../assets/alert-red.png")} 
-                    style={styles.imageButton1}
+                    style={styles.reportButton}
                     />
                     <Text
-                        style={styles.textButton1}
+                        style={styles.textReport}
                     >Reportar</Text>
                     </View>
                 </TouchableOpacity>
@@ -65,10 +64,10 @@ export const Plantoes = () => (
                     <View>
                     <Image 
                     source={require("../../assets/star-blue.png")} 
-                    style={styles.imageButton2}
+                    style={styles.avaliarButton}
                     />
                     <Text
-                        style={styles.textButton2}
+                        style={styles.avaliarText}
                     >Avaliar</Text>
                     </View>
                 </TouchableOpacity>
@@ -78,13 +77,13 @@ export const Plantoes = () => (
 )
 
 const styles = StyleSheet.create({
-    button1: {
+    icone: {
         marginLeft: 30,
         height: 20,
         width: 20,
         marginRight: 10
     },
-    titleText1: {
+    solicitacaoText: {
         fontSize: 30,
         color: "#6d7a78",
         fontWeight: "300",
@@ -109,7 +108,7 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         marginLeft: 30
     },
-    titleText2: {
+    professionalText: {
         color: "#6d7a78",
         fontWeight: "500",
         fontSize: 20,
@@ -117,22 +116,21 @@ const styles = StyleSheet.create({
         marginLeft: 40
     },
     ligar: {
-        width:Dimensions.get("screen").width,
         marginTop: 15,
         marginLeft: 40,
-        flexDirection: "row",
-        alignItems: "center"
+        alignItems: "flex-start",
+        flexDirection: "row"
     },
-    button3: {
+    ligacao: {
         width: 25,
         height: 25
     },
-    titleText3: {
+    professionalCall: {
         color: "#6d7a78",
         fontWeight: "500",
         color: "#32CD32",
         fontSize: 16,
-        marginLeft: 40
+        marginLeft: 10
     },
     professional: {
         borderTopWidth: 0.5,
@@ -148,21 +146,21 @@ const styles = StyleSheet.create({
         borderColor: "#B0BEC5",
         padding: 10
     },
-    imageButton1: {
+    reportButton: {
         width: 30,
         height: 30,
         marginTop: 5,
         alignSelf: "center",
         marginLeft: 110
     },
-    imageButton2: {
+    avaliarButton: {
         width: 30,
         height: 30,
         marginTop: 5,
         alignSelf: "center",
         marginLeft: 30
     },
-    textButton1: {
+    textReport: {
         width: 98,
         height: 40,
         marginBottom: -15,
@@ -173,7 +171,7 @@ const styles = StyleSheet.create({
         marginLeft: 110,
         marginBottom: 2
     },
-    textButton2: {
+    avaliarText: {
         width: 98,
         height: 40,
         marginBottom: -15,
